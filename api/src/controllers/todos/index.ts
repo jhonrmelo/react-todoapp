@@ -2,7 +2,6 @@ import { Response, Request } from "express"
 import { ITodo } from "./../../types/todo"
 import Todo from "../../models/todo"
 
-//Todo: Refatorar isso igual é feito na aplicação da rocket
 
 const getTodos = async (req: Request, res: Response): Promise<void> => {
     try {
@@ -16,11 +15,11 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 
 const addTodo = async (req: Request, res: Response): Promise<void> => {
     try {
-        const body = req.body as Pick<ITodo, "name" | "description" | "status">
+        const body = req.body as Pick<ITodo, "nome" | "descricao" | "status">
 
         const todo: ITodo = new Todo({
-            name: body.name,
-            description: body.description,
+            nome: body.nome,
+            descricao: body.descricao,
             status: body.status
         })
         const newTodo: ITodo = await todo.save()

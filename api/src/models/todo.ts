@@ -3,12 +3,12 @@ import { model, Schema } from "mongoose"
 
 const todoSchema: Schema = new Schema(
     {
-        name: {
+        nome: {
             type: String,
             required: true
         },
 
-        description: {
+        descricao: {
             type: String,
             required: true
         },
