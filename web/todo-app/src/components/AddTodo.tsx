@@ -21,11 +21,11 @@ const AddTodo: React.FC<Props> = ({ saveTodo }) => {
             <div>
                 <div>
                     <label htmlFor="name">Nome</label>
-                    <input onChange={handleForm} type="text"></input>
+                    <input onChange={handleForm} type="text" id='name'></input>
                 </div>
                 <div>
-                    <label htmlFor="description">Description</label>
-                    <input onChange={handleForm} type="text"></input>
+                    <label htmlFor="description">Descrição</label>
+                    <input onChange={handleForm} type="text" id='description'></input>
                 </div>
             </div>
             <button disabled={formData === undefined ? true : false}>Adicionar Tarefa</button>

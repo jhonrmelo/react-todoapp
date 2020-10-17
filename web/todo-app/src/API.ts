@@ -1,12 +1,12 @@
 import axios, { AxiosResponse } from "axios"
 import { ApiDataType, ITodo } from "./type"
 
-const baseUrl: string = "http://localhost:4000/"
+const baseUrl: string = "http://localhost:4000"
 
 export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
 
     try {
-        const todos: AxiosResponse<ApiDataType> = await axios.get(`${baseUrl}todos`)
+        const todos: AxiosResponse<ApiDataType> = await axios.get(`${baseUrl}/todos`)
 
         return todos
     }
@@ -49,7 +49,7 @@ export const updateTodo = async (todo: ITodo): Promise<AxiosResponse<ApiDataType
 
 export const deletedTodo = async (_id: string): Promise<AxiosResponse<ApiDataType>> => {
     try {
-        const deletedTodo: AxiosResponse<ApiDataType> = await axios.delete(`${baseUrl}delete-todo/${_id}`)
+        const deletedTodo: AxiosResponse<ApiDataType> = await axios.delete(`${baseUrl}/delete-todo/${_id}`)
 
         return deletedTodo
     }

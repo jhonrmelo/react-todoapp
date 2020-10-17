@@ -15,12 +15,13 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 
 const addTodo = async (req: Request, res: Response): Promise<void> => {
     try {
-        const body = req.body as Pick<ITodo, "nome" | "descricao" | "status">
-
+        console.log(req.body)
+        const body = req.body as Pick<ITodo, "name" | "description" | "status">
+    
         const todo: ITodo = new Todo({
-            nome: body.nome,
-            descricao: body.descricao,
-            status: body.status
+            name: body.name,
+            description: body.description,
+            status: true
         })
         const newTodo: ITodo = await todo.save()
         const allTodos: ITodo[] = await Todo.find()
