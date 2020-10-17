@@ -6,7 +6,7 @@ type Props = {
     saveTodo: (e: React.FormEvent, formData: ITodo | any) => void
 }
 
-const addTodo: React.FC<Props> = ({ saveTodo }) => {
+const AddTodo: React.FC<Props> = ({ saveTodo }) => {
     const [formData, setFormData] = useState<ITodo | {}>()
 
     const handleForm = (e: React.FormEvent<HTMLInputElement>): void => {
@@ -16,7 +16,7 @@ const addTodo: React.FC<Props> = ({ saveTodo }) => {
         })
     }
     return (
-        <form onSubmit={(e) => saveTodo(e, formData)} className="Form">
+        <form onSubmit={(e) => saveTodo(e, formData)} className='Form'>
 
             <div>
                 <div>
@@ -32,4 +32,4 @@ const addTodo: React.FC<Props> = ({ saveTodo }) => {
         </form>
     )
 }
-export default addTodo
+export default AddTodo

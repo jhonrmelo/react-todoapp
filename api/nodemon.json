@@ -1,7 +1,7 @@
 {
     "env": {
         "MONGO_USER": "jonathan_melo",
-        "MONGO_PASSWORD": "1rkIERywA7K2BOfF",
+        "MONGO_PASSWORD": "JvZyTZSvhAqzL7jz",
         "MONGO_DB": "reactTodoApp_db"
     }
 }

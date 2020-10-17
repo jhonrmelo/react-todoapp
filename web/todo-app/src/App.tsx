@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TodoItem from './components/TodoItem'
-import AddTodo from './components/addTodo'
+import AddTodo from './components/AddTodo'
 import { addTodo, deletedTodo, getTodos, updateTodo } from './API'
 import { ITodo } from './type'
 
@@ -66,3 +66,5 @@ const App: React.FC = () => {
     </main>
   )
 }
+
+export default App;
